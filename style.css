@@ -1,0 +1,48 @@
+body{
+    background-image: url("image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3,h2{
+    font-size: 18px!important;
+}
+
+h2{
+    color: #1fbadf!important;
+}
+
+footer{
+    background-color: #1fbadf;
+}
+
+
+.img2{
+    position: relative;
+    top: -22px;
+}
+
+hr{
+    border-top: 2px black dotted!important;
+}
+
+h1{
+    font-size: 22px!important;
+}
+
+p{
+    font-size: 14px!important;
+}
+
+.btn{
+    float: right;
+    width: 150px;
+    height: 50px;
+    border: transparent;
+    border-radius: 15px!important;
+    font-size: 22px!important;
+    font-weight: bold;
+    background-color: #018aa9;
+    color: white!important;
+    
+}
