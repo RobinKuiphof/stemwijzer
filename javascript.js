@@ -3733,13 +3733,16 @@ var subjects = [{
 
 
 function updatequestion(button){
-    document.getElementById("eens").classList.remove("active")
-    document.getElementById("neutraal").classList.remove("active")
-    document.getElementById("oneens").classList.remove("active")
+    document.getElementById("pro").classList.remove("active")
+    document.getElementById("none").classList.remove("active")
+    document.getElementById("contra").classList.remove("active")
     
     if(count == 30){
         document.getElementById("form").classList.add("displaynone")
         document.getElementById("gewicht").classList.remove("displaynone")
+
+
+        
     }else{
         document.getElementById("gewicht").classList.add("displaynone")
         document.getElementById("form").classList.remove("displaynone")
@@ -3754,18 +3757,18 @@ function updatequestion(button){
         }
         count++;
     }
-}
+  }
 
 
-var answers = []
-let title = document.getElementById("title");
-let description = document.getElementById("beschrijving");
-let count = 0;
-let back = document.getElementById("back")
+  var answers = []
+  let title = document.getElementById("title");
+  let description = document.getElementById("beschrijving");
+  let count = 0;
+  let back = document.getElementById("back")
 
-updatequestion(0)
+  updatequestion(0)
 
-back.onclick = function(){ 
+  back.onclick = function(){ 
     if(count == 0){
         count == count
     }else if(count < 2){
@@ -3774,5 +3777,4 @@ back.onclick = function(){
       count = count-2
     }
     updatequestion(0)
-    
   }

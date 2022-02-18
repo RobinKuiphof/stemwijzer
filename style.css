@@ -16,6 +16,9 @@ footer{
     background-color: #1fbadf;
 }
 
+input{
+    margin: 5px!important;
+}
 
 .img2{
     position: relative;
