@@ -3743,12 +3743,12 @@ function updatequestion(button){
     }else{
         document.getElementById("gewicht").classList.add("displaynone")
         document.getElementById("form").classList.remove("displaynone")
-        if(answers[count] != undefined){
-            document.getElementById(answers[count]).className = "active button inactive"
+        if(answers[count+1] != undefined){
+            document.getElementById(answers[count+1]).className = "active button inactive"
         }
+
         title.innerHTML = subjects[count].title;
         description.innerHTML = subjects[count].statement;
-        console.log(count)
         if(button != 0){
             answers[count] = button.id;
         }
