@@ -3760,6 +3760,28 @@ function updatequestion(button){
   }
 
 
+  function calcresult(){
+    document.getElementById("gewicht").classList.add("displaynone")
+    for(var i =1; i<30; i++){
+      for(var x =0; x< parties.length; x++){
+        if(answers[i] == subjects[i].parties[x]?.position){
+          console.log(document.getElementById(i))
+          
+          if(results[x] == undefined){
+            results[x] = 0;
+          }
+
+          if(document.getElementById(i).checked == true){
+            results[x] = results[x] + 2;
+          }else{
+            results[x] = results[x] + 1;
+          }
+        }
+      }
+    }
+  }
+
+  var results = []
   var answers = []
   let title = document.getElementById("title");
   let description = document.getElementById("beschrijving");
