@@ -3761,20 +3761,25 @@ function updatequestion(button){
 
 
   function calcresult(){
-    document.getElementById("gewicht").classList.add("displaynone")
+    document.getElementById("gewicht").classList.add("displaynone");
+    document.getElementById("resultmain").classList.remove("displaynone");
+    document.getElementById("verderbtn").classList.add("displaynone")
     for(var i =1; i<30; i++){
-      for(var x =0; x< parties.length; x++){
+      for(var x =0; x< (parties.length-1); x++){
         if(answers[i] == subjects[i].parties[x]?.position){
-          console.log(document.getElementById(i))
           
           if(results[x] == undefined){
-            results[x] = 0;
+            results[x] = { name: parties[x], score: 0};
           }
 
           if(document.getElementById(i).checked == true){
-            results[x] = results[x] + 2;
+            results[x].score = results[x].score + 2;
           }else{
-            results[x] = results[x] + 1;
+            results[x].score = results[x].score + 1;
+          }
+        }else{
+          if(results[x] == undefined){
+            results[x] = { name: parties[x], score: 0};
           }
         }
       }
@@ -3799,4 +3804,22 @@ function updatequestion(button){
       count = count-2
     }
     updatequestion(0)
+  }
+
+  function result(){
+    var minzetels = 5;
+    var result = document.getElementById("result");
+
+    results.sort((a, b) => {
+      return a.score - b.score;
+    });
+    console.log(answers);
+
+  
+    for(i=0; i<answers.length; i++){
+      if(document.getElementById(""))
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" +  results[i].name.name + " " + floor(results[i].score/30*100) + "% </td>";
+      result.appendChild(tr);
+    }
   }
